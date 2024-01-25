@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 900;
+  font-family: digital;
+}
+@font-face {
+  font-family: 'Digital';
+  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot');
+  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7')
+      format('svg');
+}
+:root {
+  --white: #f0f0f0;
+  --light-grey: #6c6c6c;
+  --black: #1e1e1e;
+  --equalColor: rgb(150, 48, 8);
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #242424;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calculator {
+  display: grid;
+  grid-template-areas:
+    'clear clear negative  divide'
+    'seven eight nine multiply'
+    'four five six subtract'
+    'one two three add'
+    'zero zero decimal equals';
+  grid-template-columns: 70px 70px 70px 70px;
+  gap: 15px;
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 0;
+  background-color: var(--black);
+}
+
+/*--------------------DISPLAY----------------------------------*/
+#display {
+  font-family: digital;
+  margin-top: 50px;
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  border-radius: 0px;
+
+  background-color: rgb(61, 66, 62);
+  z-index: 2;
+}
+
+#answer {
+  text-align: right;
+  font-size: 2rem;
+  font-weight: 400;
+  height: 48px;
+  color: white;
+}
+#expression {
+  text-align: right;
+  font-size: 2rem;
+  height: 30px;
+  color: white;
+  font-weight: 300;
+}
+
+/*--------------------------------BUTTONS-----------------------*/
+button {
+  height: 70px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease-in;
+}
+button:active {
+  transform: scale(0.95);
+}
+#clear {
+  border-radius: 20px;
+  grid-area: clear;
+}
+#negative {
+  border-radius: 50%;
+  grid-area: negative;
+}
+#percentage {
+  border-radius: 50%;
+  grid-area: percentage;
+}
+#divide {
+  border-radius: 50%;
+  grid-area: divide;
+}
+#multiply {
+  border-radius: 50%;
+  grid-area: multiply;
+}
+#subtract {
+  border-radius: 50%;
+  grid-area: subtract;
+}
+#add {
+  border-radius: 50%;
+  grid-area: add;
+}
+#one {
+  border-radius: 50%;
+  grid-area: one;
+}
+#two {
+  border-radius: 50%;
+  grid-area: two;
+}
+#three {
+  border-radius: 50%;
+  grid-area: three;
+}
+#four {
+  border-radius: 50%;
+  grid-area: four;
+}
+#five {
+  border-radius: 50%;
+  grid-area: five;
+}
+#six {
+  border-radius: 50%;
+  grid-area: six;
+}
+#seven {
+  border-radius: 50%;
+  grid-area: seven;
+}
+#eight {
+  border-radius: 50%;
+  grid-area: eight;
+}
+#nine {
+  border-radius: 50%;
+  grid-area: nine;
+}
+#zero {
+  grid-area: zero;
+
+  font-size: 1.5rem;
+  color: #fafafa;
+
+  border-radius: 10px;
+
+  background: #6c6c6c;
+}
+#equals {
+  border-radius: 50%;
+  grid-area: equals;
+}
+#decimal {
+  text-align: center;
+  border-radius: 50%;
+  grid-area: decimal;
+}
+.light-grey {
+  background-color: var(--light-grey);
+  color: white;
+}
+.light-white {
+  background-color: var(--white);
+  color: #1e1e1e;
+}
+.light-equals {
+  background-color: var(--equalColor);
+  font-size: larger;
+  font-weight: 900;
+}
