@@ -1,4 +1,4 @@
-# Markdown Previer App
+# Js Calculator
 
 This a one of the Certification projects i made for Freecodecamp.org .
 
